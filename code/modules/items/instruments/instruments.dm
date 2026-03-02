@@ -588,6 +588,7 @@
 /* -------------------- Dramatic Bike Horn -------------------- */
 
 TYPEINFO(/obj/item/instrument/bikehorn/dramatic)
+	analyser_flags = parent_type::analyser_flags | ANALYSER_LEGACY
 	mats = 2
 
 /obj/item/instrument/bikehorn/dramatic
@@ -645,6 +646,9 @@ TYPEINFO(/obj/item/instrument/bikehorn/dramatic)
 
 /* -------------------- Harmonica -------------------- */
 
+TYPEINFO(/obj/item/instrument/harmonica)
+	analyser_flags = parent_type::analyser_flags | ANALYSER_LEGACY
+	mats = list("metal" = 1)
 /obj/item/instrument/harmonica
 	name = "harmonica"
 	desc = "A cheap pocket instrument, good for helping time to pass."
@@ -746,6 +750,9 @@ TYPEINFO(/obj/item/instrument/bikehorn/dramatic)
 			user.AddComponent(/datum/component/bot_command/janitor, bots, src.commandtime)
 /* -------------------- Vuvuzela -------------------- */
 
+TYPEINFO(/obj/item/instrument/vuvuzela)
+	analyser_flags = parent_type::analyser_flags | ANALYSER_LEGACY
+	mats = list("any" = 1)
 /obj/item/instrument/vuvuzela
 	name = "vuvuzela"
 	desc = "A loud horn made popular at soccer games-BZZZZZZZZZZZZZZZZZZZZZZZZZZZ"

@@ -1,3 +1,6 @@
+TYPEINFO(/obj/item/crowbar)
+	analyser_flags = parent_type::analyser_flags | ANALYSER_LEGACY
+	mats = list("metal" = 1)
 /obj/item/crowbar
 	name = "crowbar"
 	desc = "A tool used as a lever to pry objects."

@@ -268,6 +268,7 @@ ABSTRACT_TYPE(/obj/item/storage/secure)
 // SECURE BRIEFCASE
 
 TYPEINFO(/obj/item/storage/secure/sbriefcase)
+	analyser_flags = parent_type::analyser_flags | ANALYSER_ELECTRONIC
 	mats = 8
 
 /obj/item/storage/secure/sbriefcase
@@ -287,7 +288,9 @@ TYPEINFO(/obj/item/storage/secure/sbriefcase)
 	can_hold = list(/obj/item/stamped_bullion)
 
 TYPEINFO(/obj/item/storage/secure/ssafe)
+	analyser_flags = parent_type::analyser_flags | ANALYSER_ELECTRONIC
 	mats = 8
+	manufactured_type = /obj/item/storage/secure/ssafe //For subtypes
 
 /obj/item/storage/secure/ssafe
 	name = "secure safe"
@@ -301,7 +304,6 @@ TYPEINFO(/obj/item/storage/secure/ssafe)
 	anchored = ANCHORED
 	density = 0
 	desc = "A extremely tough secure safe."
-	mechanics_type_override = /obj/item/storage/secure/ssafe
 
 	attack_hand(mob/user)
 		return src.AttackSelf(user)
