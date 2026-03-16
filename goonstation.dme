@@ -1776,6 +1776,7 @@
 #include "code\modules\networks\computer3\sniffer.dm"
 #include "code\modules\networks\computer3\terminal.dm"
 #include "code\modules\networks\computer3\textfiles.dm"
+#include "code\modules\networks\computer3\vspace.dm"
 #include "code\modules\networks\computer3\writer.dm"
 #include "code\modules\networks\computer3\mainframe2\artifact_res.dm"
 #include "code\modules\networks\computer3\mainframe2\documents.dm"

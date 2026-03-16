@@ -231,11 +231,18 @@ TYPEINFO(/obj/item/peripheral)
 		return 1
 
 	receive_signal(datum/signal/signal)
+		message_coders("surely not")
+
 		if(!src.host || host.status & (NOPOWER|BROKEN))
 			return
 
+		message_coders("surely not2")
+
 		if(!signal || (signal.encryption && signal.encryption != code))
 			return
+
+		message_coders("Got here in periph receive_signal, my id is:"+src.net_id)
+		signal.show()
 
 		//src.logstring += "R@[src.frequency]:[src.code];"
 
@@ -258,7 +265,7 @@ TYPEINFO(/obj/item/peripheral)
 						SEND_SIGNAL(src, COMSIG_MOVABLE_POST_RADIO_PACKET, pingsignal, broadcast_range)
 
 				return
-
+		message_coders("after periph checking netmode")
 		var/datum/signal/newsignal = get_free_signal()
 		newsignal.data = signal.data:Copy()
 		//if(src.code)

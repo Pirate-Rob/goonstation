@@ -40,11 +40,12 @@ TYPEINFO(/mob/living/carbon/human/virtual)
 			return
 		if (..(parent))
 			return 1
-		var/turf/T = get_turf(src)
+		//var/turf/T = get_turf(src)
 
 		if (!escape_vr)
 			var/area/A = get_area(src)
-			if ((T && !(T.z == 2)) || (A && !A.virtual))
+			//if ((T && !(T.z == 2)) ||
+			if((A && !A.virtual))
 				boutput(src, SPAN_ALERT("Is this virtual?  Is this real?? <b>YOUR MIND CANNOT TAKE THIS METAPHYSICAL CALAMITY</b>"))
 				src.gib()
 				return
